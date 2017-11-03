@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fno-warn-tabs #-}
 {- $Id$
 ******************************************************************************
 *                                  A F R P                                   *
@@ -225,11 +226,6 @@ sscan_t9r =
      NoEvent, NoEvent, Event (), NoEvent,	-- 4.0 s
      NoEvent, NoEvent, NoEvent,	 NoEvent,	-- 5.0 s
      NoEvent]
-
-
-maybeToEvent :: Maybe a -> Event a
-maybeToEvent Nothing  = NoEvent
-maybeToEvent (Just a) = Event a
 
 
 edgeBy_sscan :: (a -> a -> Maybe b) -> a -> SF a (Event b)
